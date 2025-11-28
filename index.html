@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زيوت طبيعية مغربية - جمالك من الطبيعة</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-stone-50 overflow-x-hidden">
+    <header class="gradient-bg text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-6">
+                <span class="text-6xl">🌿</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                استعيدي إشراقة بشرتك وثقتك بنفسك مع قوة الطبيعة النقية
+            </h1>
+            <p class="text-xl text-green-100 mb-8">زيوت وكريمات طبيعية 100% بدون أي إضافات كيميائية</p>
+        </div>
+    </header>
+
+    <section class="products-section py-16 px-2 sm:px-4 w-full max-w-full overflow-hidden" id="products">
+        <div class="w-full max-w-7xl mx-auto px-0">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">منتجاتنا الطبيعية</h2>
+                <p class="text-gray-600 text-lg">اختاري من مجموعة زيوتنا الطبيعية 100%</p>
+            </div>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-green-800 mb-8 flex items-center gap-3 justify-center">
+                    <span class="text-3xl">🫒</span> زيوت طبيعية
+                </h3>
+                
+                <div class="carousel-wrapper" id="oilsCarousel">
+                    <button class="carousel-nav-btn" onclick="moveCarousel('oils', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="oilsTrack">
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=250&fit=crop" alt="زيت الحبة السوداء" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت الحبة السوداء</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">يقوي المناعة ومضاد للالتهابات</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead>
+                                        <tr class="border-b border-green-200">
+                                            <th class="text-green-700">الحجم</th>
+                                            <th class="text-green-700">السعر</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">35 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">55 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">95 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">180 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">320 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">580 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1599451897608-98e6e2f25348?w=400&h=250&fit=crop" alt="زيت اللوز الحلو" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت اللوز الحلو</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">يرطب البشرة ويزيل الهالات</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">30 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">45 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">80 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">160 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">280 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">500 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=250&fit=crop" alt="زيت الخروع" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت الخروع</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">لتكثيف الشعر والرموش</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">25 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">40 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">70 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">140 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">250 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">450 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1607290817806-549dd3d59647?w=400&h=250&fit=crop" alt="زيت القنب الهندي" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت القنب (الكيف)</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">مسكن لآلام المفاصل</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">50 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">75 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">130 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">280 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">500 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">900 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=400&h=250&fit=crop" alt="زيت جوز الهند" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت جوز الهند</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">مرطب شامل للبشرة والشعر</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">28 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">42 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">75 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">150 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">270 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">480 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop" alt="زيت السمسم" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت السمسم</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">غني بمضادات الأكسدة</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">22 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">35 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">60 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">120 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">210 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">380 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1598046937895-2be846402c0d?w=400&h=250&fit=crop" alt="زيت الكتان" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت الكتان</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">أغنى مصدر بأوميغا 3</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">32 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">48 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">85 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">170 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">300 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">550 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1600187128498-d8a1c5a19460?w=400&h=250&fit=crop" alt="زيت الجوز" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت الجوز (الجارجع)</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">ينشط الذاكرة</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">40 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">60 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">100 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">200 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">360 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">650 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1509622905150-fa66d3906e09?w=400&h=250&fit=crop" alt="زيت القرع" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت القرع (اليقطين)</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">مفيد لصحة البروستاتا</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">38 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">55 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">95 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">190 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">340 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">620 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+
+                        <div class="carousel-slide bg-green-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                            <div class="flex justify-center mb-2">
+                                <img src="https://images.unsplash.com/photo-1567892737950-6d77f4a1a2e9?w=400&h=250&fit=crop" alt="زيت الفول السوداني" class="product-img object-contain rounded-lg">
+                            </div>
+                            <h4 class="text-green-800 font-bold text-sm mb-1">زيت الفول السوداني</h4>
+                            <p class="text-gray-600 text-xs mb-1 line-clamp-1">غني بفيتامين E</p>
+                            <div class="bg-white rounded-lg p-1 mb-2">
+                                <table class="w-full compact-table">
+                                    <thead><tr class="border-b border-green-200"><th class="text-green-700">الحجم</th><th class="text-green-700">السعر</th></tr></thead>
+                                    <tbody class="text-center text-gray-700">
+                                        <tr><td>30ml</td><td class="font-bold">20 DH</td></tr>
+                                        <tr><td>50ml</td><td class="font-bold">32 DH</td></tr>
+                                        <tr><td>100ml</td><td class="font-bold">55 DH</td></tr>
+                                        <tr><td>250ml</td><td class="font-bold">110 DH</td></tr>
+                                        <tr><td>500ml</td><td class="font-bold">190 DH</td></tr>
+                                        <tr><td>1L</td><td class="font-bold">340 DH</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-nav-btn" onclick="moveCarousel('oils', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                </div>
+                
+                <div class="carousel-dots" id="oilsDots"></div>
+                
+                <div class="carousel-progress">
+                    <div class="carousel-progress-bar" id="oilsProgress" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-amber-800 mb-8 flex items-center gap-3 justify-center">
+                    <span class="text-3xl">✨</span> كريمات أصلية
+                </h3>
+                
+                <div class="carousel-wrapper" id="creamsCarousel">
+                    <button class="carousel-nav-btn" onclick="moveCarousel('creams', 1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="creamsTrack">
+                            <div class="carousel-slide bg-amber-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                                <div class="flex justify-center mb-2">
+                                    <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=250&fit=crop" alt="كريم اللوز الأصلي" class="product-img object-contain rounded-lg">
+                                </div>
+                                <h4 class="text-amber-800 font-bold text-sm mb-1">كريم اللوز الأصلي</h4>
+                                <p class="text-gray-600 text-xs mb-1 line-clamp-1">للترطيب العميق ونعومة البشرة</p>
+                                <div class="bg-white rounded-lg p-1 mb-2">
+                                    <table class="w-full compact-table">
+                                        <thead>
+                                            <tr class="border-b border-amber-200">
+                                                <th class="text-amber-700">الحجم</th>
+                                                <th class="text-amber-700">السعر</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center text-gray-700">
+                                            <tr><td>30ml</td><td class="font-bold">45 DH</td></tr>
+                                            <tr><td>50ml</td><td class="font-bold">70 DH</td></tr>
+                                            <tr><td>100ml</td><td class="font-bold">120 DH</td></tr>
+                                            <tr><td>250ml</td><td class="font-bold">250 DH</td></tr>
+                                            <tr><td>500ml</td><td class="font-bold">450 DH</td></tr>
+                                            <tr><td>1L</td><td class="font-bold">800 DH</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                            </div>
+
+                            <div class="carousel-slide bg-amber-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                                <div class="flex justify-center mb-2">
+                                    <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400&h=250&fit=crop" alt="كريم القنب الهندي" class="product-img object-contain rounded-lg">
+                                </div>
+                                <h4 class="text-amber-800 font-bold text-sm mb-1">كريم القنب الهندي (الكيف)</h4>
+                                <p class="text-gray-600 text-xs mb-1 line-clamp-1">لتخفيف آلام المفاصل والروماتيزم</p>
+                                <div class="bg-white rounded-lg p-1 mb-2">
+                                    <table class="w-full compact-table">
+                                        <thead>
+                                            <tr class="border-b border-amber-200">
+                                                <th class="text-amber-700">الحجم</th>
+                                                <th class="text-amber-700">السعر</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center text-gray-700">
+                                            <tr><td>30ml</td><td class="font-bold">60 DH</td></tr>
+                                            <tr><td>50ml</td><td class="font-bold">90 DH</td></tr>
+                                            <tr><td>100ml</td><td class="font-bold">160 DH</td></tr>
+                                            <tr><td>250ml</td><td class="font-bold">350 DH</td></tr>
+                                            <tr><td>500ml</td><td class="font-bold">620 DH</td></tr>
+                                            <tr><td>1L</td><td class="font-bold">1100 DH</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                            </div>
+
+                            <div class="carousel-slide bg-amber-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                                <div class="flex justify-center mb-2">
+                                    <img src="https://images.unsplash.com/photo-1570194065650-d99fb4ee0016?w=400&h=250&fit=crop" alt="كريم زيت الأركان" class="product-img object-contain rounded-lg">
+                                </div>
+                                <h4 class="text-amber-800 font-bold text-sm mb-1">كريم زيت الأركان المغربي</h4>
+                                <p class="text-gray-600 text-xs mb-1 line-clamp-1">لتغذية البشرة ومحاربة التجاعيد</p>
+                                <div class="bg-white rounded-lg p-1 mb-2">
+                                    <table class="w-full compact-table">
+                                        <thead>
+                                            <tr class="border-b border-amber-200">
+                                                <th class="text-amber-700">الحجم</th>
+                                                <th class="text-amber-700">السعر</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center text-gray-700">
+                                            <tr><td>30ml</td><td class="font-bold">55 DH</td></tr>
+                                            <tr><td>50ml</td><td class="font-bold">85 DH</td></tr>
+                                            <tr><td>100ml</td><td class="font-bold">150 DH</td></tr>
+                                            <tr><td>250ml</td><td class="font-bold">320 DH</td></tr>
+                                            <tr><td>500ml</td><td class="font-bold">580 DH</td></tr>
+                                            <tr><td>1L</td><td class="font-bold">1000 DH</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                            </div>
+
+                            <div class="carousel-slide bg-amber-50 rounded-xl p-2 shadow-md card-hover transition-all duration-300 text-center">
+                                <div class="flex justify-center mb-2">
+                                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&h=250&fit=crop" alt="كريم الصبار" class="product-img object-contain rounded-lg">
+                                </div>
+                                <h4 class="text-amber-800 font-bold text-sm mb-1">كريم الصبار (الألوفيرا)</h4>
+                                <p class="text-gray-600 text-xs mb-1 line-clamp-1">لترطيب وتهدئة البشرة الحساسة</p>
+                                <div class="bg-white rounded-lg p-1 mb-2">
+                                    <table class="w-full compact-table">
+                                        <thead>
+                                            <tr class="border-b border-amber-200">
+                                                <th class="text-amber-700">الحجم</th>
+                                                <th class="text-amber-700">السعر</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center text-gray-700">
+                                            <tr><td>30ml</td><td class="font-bold">40 DH</td></tr>
+                                            <tr><td>50ml</td><td class="font-bold">65 DH</td></tr>
+                                            <tr><td>100ml</td><td class="font-bold">110 DH</td></tr>
+                                            <tr><td>250ml</td><td class="font-bold">230 DH</td></tr>
+                                            <tr><td>500ml</td><td class="font-bold">420 DH</td></tr>
+                                            <tr><td>1L</td><td class="font-bold">750 DH</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn-order w-full text-white text-xs py-2 rounded-lg font-bold">🛒 اطلب الآن</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-nav-btn" onclick="moveCarousel('creams', -1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                </div>
+                
+                <div class="carousel-dots" id="creamsDots"></div>
+                
+                <div class="carousel-progress">
+                    <div class="carousel-progress-bar" id="creamsProgress" style="width: 25%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-stone-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">علاش كيختارونا آلاف المغاربة؟</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition-all duration-300 flex gap-4 items-start">
+                    <span class="text-3xl">💎</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-700 mb-2">نقاء طبيعي 100% يستحقه جسمك</h3>
+                        <p class="text-gray-600">زيوتنا مستخلصة بالطرق التقليدية الباردة للحفاظ على كل فائدة طبيعية تستحقينها.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition-all duration-300 flex gap-4 items-start">
+                    <span class="text-3xl">🌟</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-700 mb-2">نتائج ملموسة تعيد لك ثقتك</h3>
+                        <p class="text-gray-600">ستلاحظين الفرق من أول استخدام في نعومة بشرتك وقوة شعرك وإشراقتك.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md card-hover transition-all duration-300 flex gap-4 items-start">
+                    <span class="text-3xl">🛡️</span>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-700 mb-2">أمان تام لك ولعائلتك</h3>
+                        <p class="text-gray-600">بدون مواد كيميائية أو حافظات صناعية، منتجات آمنة للجميع حتى للأطفال والحوامل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-green-800 text-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="text-5xl mb-6 block">💬</span>
+            <blockquote class="text-xl md:text-2xl leading-relaxed mb-6">
+                "كنت كنعاني من جفاف كبير فبشرتي وشعري كان كيتقصف وكيحشمني بزاف. من أول سيمانة بديت نستعمل فيها زيت اللوز الحلو، حسيت بشرتي رجعات كتنفس! دابا كنخرج من الدار بثقة وراجلي لاحظ الفرق قبل مني. الحمد لله، هاد الزيوت بدلات حياتي بصح."
+            </blockquote>
+            <p class="text-green-200 font-medium">- أم أيوب، الدار البيضاء</p>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-4">قصص نجاح حقيقية</h2>
+            <p class="text-center text-gray-600 mb-12">شوفي كيفاش بدلات زيوتنا حياة عملائنا</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="before-after-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center text-2xl">👩</div>
+                        <div>
+                            <h4 class="font-bold text-green-800">فاطمة الزهراء</h4>
+                            <p class="text-sm text-gray-600">مراكش</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "كنت كنحشم من شعري الخفيف وديما كنغطيه، جربت زيت الخروع مع زيت الحبة السوداء شهرين. دابا شعري ولا كثيف ولامع وبديت نخليه مكشوف بكل فخر!"
+                    </p>
+                    <div class="mt-4 flex gap-2">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">زيت الخروع</span>
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">زيت الحبة السوداء</span>
+                    </div>
+                </div>
+
+                <div class="before-after-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-amber-200 rounded-full flex items-center justify-center text-2xl">👨</div>
+                        <div>
+                            <h4 class="font-bold text-green-800">عبد الرحيم بنعلي</h4>
+                            <p class="text-sm text-gray-600">فاس</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "كنت كنعاني من وجع الركبة سنين وجربت كلشي بلا فايدة. صاحبي نصحني بكريم الكيف، والحمد لله مورا شهر وليت كنمشي ونلعب مع ولادي بلا وجع!"
+                    </p>
+                    <div class="mt-4 flex gap-2">
+                        <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm">كريم القنب الهندي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-stone-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">شنو كيقولو عملاؤنا؟</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-4">"والله مستغربة علاش ما عرفتش هاد الزيوت من بكري! زيت جوز الهند دار فشعري شي حاجة خرا، بناتي ولاو كيسولوني شنو درتي لشعرك أماه."</p>
+                    <p class="text-green-700 font-medium">- أم يوسف، الدار البيضاء</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-4">"أنا راجل وما كنتش كنهتم بهاد الشي، ولكن مراتي جابت لي زيت الحبة السوداء للركبة ديالي. بصح دابا وليت كنمشي مزيان وما كنحس بوالو، الله يعطيكم الصحة."</p>
+                    <p class="text-green-700 font-medium">- سي محمد، طنجة</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-4">"طلبت كريم اللوز وتوقعت يكون عادي بحال لخرين، ولكن والله فرق كبير! ريحتو زوينة وبشرتي ولات ناعمة، حتى راجلي ولا كيستعملو معايا."</p>
+                    <p class="text-green-700 font-medium">- سناء، الرباط</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex gap-1 mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="text-gray-700 mb-4">"الليفريزون كان سريع والتغليف نظيف ومرتب، كتحس بلي كيهتمو بالتفاصيل. جربت زيت السمسم لبنتي الصغيرة وبشرتها تحسنات بزاف، أمانة منتجات تستاهل كل درهم."</p>
+                    <p class="text-green-700 font-medium">- نادية، أكادير</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-red-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-5xl mb-6 block">😔</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-red-800 mb-6">
+                واش عييتي من المنتجات الكيميائية اللي كتضر بشرتك وشعرك أكثر مما كتنفعهم؟
+            </h2>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-green-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-5xl mb-6 block">✨</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-8">
+                مع زيوتنا الطبيعية المغربية، غادي ترجعي جمالك الحقيقي وتحسي براحة وثقة من جديد
+            </h2>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">الفوائد التي ستحصلين عليها</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="text-center p-6 rounded-2xl bg-green-50 card-hover transition-all duration-300">
+                    <span class="text-5xl mb-4 block">💆‍♀️</span>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">ترطيب عميق للبشرة</h3>
+                    <p class="text-gray-600">زيوتنا تتغلغل في طبقات البشرة العميقة لتمنحك ترطيباً يدوم طوال اليوم وتحميك من الجفاف.</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-amber-50 card-hover transition-all duration-300">
+                    <span class="text-5xl mb-4 block">💪</span>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">تقوية الشعر ومنع التساقط</h3>
+                    <p class="text-gray-600">تغذي بصيلات الشعر من الجذور وتمنحه القوة واللمعان وتوقف التساقط بشكل ملحوظ.</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-amber-50 card-hover transition-all duration-300">
+                    <span class="text-5xl mb-4 block">🌸</span>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">تخفيف آلام المفاصل والعضلات</h3>
+                    <p class="text-gray-600">كريماتنا الطبيعية تخفف الالتهابات وتهدئ الآلام لتعود لحياتك الطبيعية بدون معاناة.</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-green-50 card-hover transition-all duration-300">
+                    <span class="text-5xl mb-4 block">🌿</span>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">مكونات آمنة وموثوقة</h3>
+                    <p class="text-gray-600">كل منتجاتنا طبيعية 100% ومناسبة لجميع أنواع البشرة بما فيها الحساسة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-stone-100">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">طريقة الاستخدام</h2>
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</span>
+                        <div>
+                            <h4 class="font-bold text-green-800">نظفي المنطقة المراد علاجها</h4>
+                            <p class="text-gray-600 text-sm">اغسلي البشرة أو الشعر جيداً وجففيه برفق</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</span>
+                        <div>
+                            <h4 class="font-bold text-green-800">ضعي كمية مناسبة من الزيت أو الكريم</h4>
+                            <p class="text-gray-600 text-sm">قطرات قليلة للزيت أو كمية بحجم حبة الفاصوليا للكريم</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</span>
+                        <div>
+                            <h4 class="font-bold text-green-800">دلكي بحركات دائرية لطيفة</h4>
+                            <p class="text-gray-600 text-sm">استمري بالتدليك لمدة 2-3 دقائق لضمان الامتصاص</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">4</span>
+                        <div>
+                            <h4 class="font-bold text-green-800">اتركيه ليعمل سحره</h4>
+                            <p class="text-gray-600 text-sm">للشعر: اتركيه ساعة أو طوال الليل. للبشرة: يُترك بدون غسل</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">5</span>
+                        <div>
+                            <h4 class="font-bold text-green-800">كرري الاستخدام بانتظام</h4>
+                            <p class="text-gray-600 text-sm">للحصول على أفضل النتائج، استخدمي المنتج 2-3 مرات أسبوعياً</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                🌿 ابدأي رحلتك نحو جمال طبيعي وصحة متجددة اليوم، لأنك تستحقين الأفضل! 🌿
+            </h2>
+            <button class="bg-white text-green-800 px-10 py-4 rounded-full text-xl font-bold hover:bg-green-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+                اطلبي الآن
+            </button>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">الأسئلة الشائعة</h2>
+            <div class="space-y-4">
+                <div class="border border-green-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full p-5 text-right bg-green-50 hover:bg-green-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-green-800">واش الزيوت مناسبة لجميع أنواع البشرة؟</span>
+                        <span id="icon1" class="text-green-600 text-2xl">+</span>
+                    </button>
+                    <div id="faq1" class="hidden p-5 bg-white">
+                        <p class="text-gray-700">أيه، جميع زيوتنا طبيعية 100% ومناسبة لكل أنواع البشرة بما فيها البشرة الحساسة. كننصحو دائماً بعمل اختبار بسيط على منطقة صغيرة من الجلد قبل الاستخدام الكامل للتأكد من عدم وجود حساسية.</p>
+                    </div>
+                </div>
+                <div class="border border-green-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full p-5 text-right bg-green-50 hover:bg-green-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-green-800">إمتى غادي نبدا نلاحظ النتائج؟</span>
+                        <span id="icon2" class="text-green-600 text-2xl">+</span>
+                    </button>
+                    <div id="faq2" class="hidden p-5 bg-white">
+                        <p class="text-gray-700">النتائج كتختلف من واحد لآخر حسب نوع البشرة والمشكل اللي بغيتي تعالجيه. عادةً العملاء كيبداو يلاحظو تحسن في الترطيب والنعومة من أول استعمال، أما النتائج الكاملة لمشاكل الشعر والبشرة كتبان خلال 2-4 أسابيع من الاستعمال المنتظم.</p>
+                    </div>
+                </div>
+                <div class="border border-green-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full p-5 text-right bg-green-50 hover:bg-green-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-green-800">كيفاش كيتم التوصيل وشحال كياخد الوقت؟</span>
+                        <span id="icon3" class="text-green-600 text-2xl">+</span>
+                    </button>
+                    <div id="faq3" class="hidden p-5 bg-white">
+                        <p class="text-gray-700">كنوفرو خدمة التوصيل لجميع مدن المغرب. الليفريزون كيتم خلال 24 ساعة من تأكيد الطلب، وكيوصل المنتج خلال 2-5 أيام حسب المدينة ديالك. جميع المنتجات كتغلف بعناية للحفاظ على جودتها أثناء الشحن. الدفع عند الاستلام متاح.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/212XXXXXXXXX" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 animate-bounce" style="animation-duration: 2s;" title="تواصل معنا عبر واتساب">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <footer class="bg-green-900 text-white py-8 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-2xl mb-4">🌿 زيوت طبيعية مغربية</p>
+            <p class="text-green-200">جمالك من الطبيعة - منتجات طبيعية 100% من المغرب</p>
+            <p class="text-green-300 mt-2 text-sm">🇲🇦 التوصيل لجميع مدن المغرب - الدفع عند الاستلام</p>
+            <p class="text-green-400 mt-4 text-sm">جميع الحقوق محفوظة © 2024</p>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
