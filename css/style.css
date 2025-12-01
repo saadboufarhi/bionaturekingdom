@@ -80,6 +80,7 @@ body {
     flex-shrink: 0;
     scroll-snap-align: center; /* Center snapping for all */
     transition: transform 0.3s ease;
+    /* Removed background-color: white to allow Tailwind classes */
 }
 
 /* Pagination Dots */

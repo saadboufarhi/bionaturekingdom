@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initCarousel(trackId, dotsId) {
     const track = document.getElementById(trackId);
-    const viewport = track.parentElement.parentElement.querySelector('.carousel-viewport');
+    const viewport = track.parentElement.parentElement.querySelector('.carousel-viewport'); // Adjusted for new structure
     const dotsContainer = document.getElementById(dotsId);
     const slides = track.querySelectorAll('.carousel-slide');
     
@@ -18,7 +18,21 @@ function initCarousel(trackId, dotsId) {
         if (index === 0) dot.classList.add('active');
         
         dot.addEventListener('click', () => {
+            // Calculate scroll position
+            // Note: This simple calculation assumes fixed width slides.
+            // For RTL, negative scroll might be needed depending on browser.
+            // We'll use the slide's offsetLeft logic relative to track.
+            
             const slide = slides[index];
+            // In smooth scroll, simple left assignment works best
+            // But for horizontal scroll snap, scrollTo is better
+            const scrollLeft = slide.offsetLeft - track.offsetLeft; // Position relative to track start
+            
+            // Center alignment adjustment?
+            // If we want to center: scrollLeft - (viewportWidth/2) + (slideWidth/2)
+            const centerOffset = (viewport.clientWidth - slide.offsetWidth) / 2;
+            
+            // In RTL, the logic is tricky. Let's stick to basic scrollIntoView if possible
             slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         });
         
@@ -30,11 +44,21 @@ function initCarousel(trackId, dotsId) {
     viewport.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
+            const center = viewport.scrollLeft + (viewport.clientWidth / 2);
+            // Note: In RTL, scrollLeft might be negative or start from right.
+            // We'll use a distance check.
+            
             let minDistance = Infinity;
             let activeIndex = 0;
 
             slides.forEach((slide, index) => {
                 // Get distance of slide center to viewport center
+                const slideCenter = slide.offsetLeft + (slide.offsetWidth / 2);
+                // Since slide.offsetLeft is relative to the track (scrolled content),
+                // and center is relative to scrolled content (scrollLeft),
+                // we can compare them directly? No, offsetLeft is static relative to parent.
+                
+                // Let's use getBoundingClientRect for accurate visual position
                 const slideRect = slide.getBoundingClientRect();
                 const viewportRect = viewport.getBoundingClientRect();
                 
@@ -67,6 +91,10 @@ function updateDots(container, activeIndex) {
 
 // Carousel Scroll Logic for Buttons
 function scrollCarousel(trackId, offset) {
+    // trackId is passed, but buttons are now siblings to viewport container in hierarchy?
+    // The structure is .carousel-container > button, viewport, button
+    // But we passed trackId (inside viewport). 
+    // Let's find viewport via trackId
     const track = document.getElementById(trackId);
     // track is inside viewport
     const viewport = track.parentElement; 
