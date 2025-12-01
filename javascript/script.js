@@ -1,59 +1,103 @@
-/**
- * Bio Nature Kingdom Script
- * Handles Carousel scrolling and FAQ toggling
- */
+document.addEventListener('DOMContentLoaded', () => {
+    initCarousel('oilsTrack', 'oilsDots');
+    initCarousel('creamsTrack', 'creamsDots');
+});
 
-/**
- * Scrolls the carousel view horizontally
- * @param {string} trackId - The ID of the track element (not viewport)
- * @param {number} offset - The number of pixels to scroll (positive or negative)
- */
+function initCarousel(trackId, dotsId) {
+    const track = document.getElementById(trackId);
+    const viewport = track.parentElement.parentElement.querySelector('.carousel-viewport');
+    const dotsContainer = document.getElementById(dotsId);
+    const slides = track.querySelectorAll('.carousel-slide');
+    
+    if (!slides.length) return;
+
+    // Generate Dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        
+        dot.addEventListener('click', () => {
+            const slide = slides[index];
+            slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+        
+        dotsContainer.appendChild(dot);
+    });
+
+    // Update Active Dot on Scroll
+    let scrollTimeout;
+    viewport.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            let minDistance = Infinity;
+            let activeIndex = 0;
+
+            slides.forEach((slide, index) => {
+                // Get distance of slide center to viewport center
+                const slideRect = slide.getBoundingClientRect();
+                const viewportRect = viewport.getBoundingClientRect();
+                
+                const slideVisualCenter = slideRect.left + (slideRect.width / 2);
+                const viewportVisualCenter = viewportRect.left + (viewportRect.width / 2);
+                
+                const distance = Math.abs(slideVisualCenter - viewportVisualCenter);
+                
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    activeIndex = index;
+                }
+            });
+
+            updateDots(dotsContainer, activeIndex);
+        }, 50); // Debounce slightly
+    });
+}
+
+function updateDots(container, activeIndex) {
+    const dots = container.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        if (index === activeIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+// Carousel Scroll Logic for Buttons
 function scrollCarousel(trackId, offset) {
     const track = document.getElementById(trackId);
-    if (!track) return;
+    // track is inside viewport
+    const viewport = track.parentElement; 
     
-    const viewport = track.parentElement;
-    
-    // In RTL, negative 'left' usually moves visually to the right,
-    // but browser implementation of scrollBy in RTL varies.
-    // For standard scrollBy, negative X moves left, positive X moves right.
     viewport.scrollBy({
-        left: -offset, 
+        left: -offset, // Negative because offset passed was for "direction" logic (RTL inverted)
         behavior: 'smooth'
     });
 }
 
-/**
- * Toggles the FAQ accordion state
- * @param {string} id - The ID of the content div to show/hide
- * @param {string} iconId - The ID of the span element containing the +/- icon
- */
+// FAQ Toggle Logic
 function toggleFaq(id, iconId) {
     const element = document.getElementById(id);
     const icon = document.getElementById(iconId);
     
-    if (!element || !icon) return;
-    
     if (element.classList.contains('active')) {
-        // Close the clicked item
         element.classList.remove('active');
         element.style.maxHeight = null;
         icon.innerText = '+';
         icon.style.transform = 'rotate(0deg)';
     } else {
-        // 1. Close all other open FAQs first (Accordion behavior)
+        // Close others
         document.querySelectorAll('.faq-content').forEach(el => {
             el.classList.remove('active');
             el.style.maxHeight = null;
         });
-        
-        // 2. Reset all icons
         document.querySelectorAll('[id^="icon"]').forEach(ic => {
             ic.innerText = '+';
             ic.style.transform = 'rotate(0deg)';
         });
 
-        // 3. Open the clicked item
         element.classList.add('active');
         element.style.maxHeight = element.scrollHeight + "px";
         icon.innerText = '-';
