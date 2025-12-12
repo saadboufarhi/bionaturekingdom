@@ -173,3 +173,22 @@ body {
 .faq-content.active {
     max-height: 500px;
 }
+@media (min-width: 1024px) {
+    /* خاص بالكريمات بس - يخلي الكارتين يملوا الشاشة كاملة ويبقوا كبار ومريحين بدون فراغ كبير */
+    #creamsTrack {
+        width: 100% !important;
+        justify-content: center !important;
+        padding-inline: 2rem !important; /* مسافة جانبية بسيطة عشان ميلزقوش في الحواف */
+    }
+
+    #creamsTrack .carousel-slide {
+        width: calc(50% - 2rem) !important;  /* كل كارت ياخد نص العرض بالظبط مع مراعاة الـ gap */
+        max-width: 580px !important;         /* عشان لو الشاشة كبيرة أوي مايبقاش الكارت واسع زيادة */
+    }
+
+    /* اختياري: نخلي الأسهم والدوتس تختفي لأننا مش محتاجين سكرول أصلاً (فقط ٢ منتج) */
+    #creamsViewport ~ .carousel-nav-btn,
+    #creamsDots {
+        display: none !important;
+    }
+}
